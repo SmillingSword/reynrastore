@@ -1,0 +1,279 @@
+:root {
+  --biru-neon: #00f0ff;
+  --ungu-neon: #a900ff;
+  --pink-neon: #ff00c8;
+  --hitam-bg: #0e0e0e;
+  --putih: #ffffff;
+}
+
+body {
+  background-color: var(--hitam-bg);
+  color: var(--putih);
+}
+
+a.nav-link {
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+a.nav-link:hover {
+  text-shadow: 0 0 5px var(--pink-neon);
+}
+
+.text-ungu { color: var(--ungu-neon) !important; }
+.text-pink { color: var(--pink-neon) !important; }
+.text-biru { color: var(--biru-neon) !important; }
+
+.btn-neon {
+  color: white;
+  border: 2px solid var(--biru-neon);
+  background-color: transparent;
+  box-shadow: 0 0 10px var(--biru-neon);
+  transition: 0.3s;
+}
+
+.btn-neon:hover {
+  background-color: var(--biru-neon);
+  color: black;
+}
+
+footer a:hover {
+  color: var(--biru-neon);
+  text-shadow: 0 0 5px var(--biru-neon);
+}
+footer h5, footer h6 {
+  font-weight: bold;
+}
+
+.border-pink {
+  border-color: var(--pink-neon) !important;
+}
+
+footer a:hover {
+  color: var(--biru-neon);
+  text-shadow: 0 0 5px var(--biru-neon);
+}
+
+footer p,
+footer li,
+footer small,
+footer a {
+  color: #ddd !important; /* abu terang */
+}
+
+footer h5, footer h6 {
+  color: var(--biru-neon);
+}
+
+footer .text-biru {
+  color: var(--biru-neon) !important;
+}
+
+footer .text-pink {
+  color: var(--pink-neon) !important;
+}
+
+footer .text-ungu {
+  color: var(--ungu-neon) !important;
+}
+
+footer a:hover {
+  text-shadow: 0 0 8px var(--biru-neon);
+}
+
+.text-light-emphasis {
+  color: #bbb !important;
+}
+
+footer a:hover {
+  color: var(--biru-neon);
+  text-shadow: 0 0 5px var(--biru-neon);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #00ffff, #a020f0, #ff00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+hr.border-pink {
+  border-color: var(--pink-neon);
+  opacity: 0.2;
+}
+
+footer a:hover {
+  color: var(--biru-neon);
+  transform: scale(1.2);
+  transition: 0.3s;
+}
+
+.carousel-inner img {
+  height: 320px;
+  object-fit: cover;
+  border: 2px solid var(--biru-neon);
+  box-shadow: 0 0 10px #00ffff, 0 0 25px #ff00ff;
+  transition: transform 0.5s ease;
+}
+
+.carousel-inner img:hover {
+  transform: scale(1.02);
+}
+
+.border-neon {
+  border: 2px solid #00ffff;
+  box-shadow: 0 0 10px #00ffff80, 0 0 20px #ff00ff80;
+}
+
+.btn-neon {
+  background: linear-gradient(45deg, #00ffff, #ff00ff);
+  border: none;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 0 5px #00ffff, 0 0 15px #ff00ff;
+  transition: 0.3s ease;
+}
+
+.btn-neon:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #00ffff, 0 0 25px #ff00ff;
+}
+
+.produk-card {
+    height: 100%; /* Biar full tinggi slide */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .produk-card img {
+    object-fit: cover;
+    max-height: 200px;
+  }
+
+  .produk-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .swiper-slide {
+    height: auto; /* biar ngikutin konten */
+  }
+
+  .produk-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 20px;
+}
+
+.produk-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.produk-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+}
+
+.produk-item:hover img {
+  transform: scale(1.05);
+  filter: brightness(0.5);
+}
+
+.produk-hover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 10px;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+}
+
+.produk-item:hover .produk-hover {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.3s ease;
+}
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.btn-outline-neon {
+  border: 2px solid #00f0ff; /* Neon pink default */
+  color: #00f0ff;
+  background-color: transparent;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.btn-outline-neon:hover {
+  background: linear-gradient(90deg, #00f0ff, #f0f, #ff00c8);
+  color: #fff;
+  border: 2px solid transparent;
+  box-shadow: 0 0 10px #f0f, 0 0 20px #0ff;
+}
+
+/* Sticky navbar neon effect */
+.sticky-top {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+/* Neon shadow glow */
+.shadow-neon {
+  box-shadow: 0 0 10px #00f0ff, 0 0 20px #f0f, 0 0 30px #ff00c8;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #00f0ff, #f0f, #ff00a2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.neon-input {
+  border: 2px solid #f0f;
+  background-color: #000;
+  color: #fff;
+  box-shadow: 0 0 10px #f0f;
+}
+.neon-input::placeholder {
+  color: #aaa;
+}
+
+.border-neon {
+  border: 2px solid #f0f;
+  box-shadow: 0 0 10px #f0f;
+}
+
+.card .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: rgba(0,0,0,0.7);
+}
+
