@@ -1,0 +1,275 @@
+:root {
+  --biru-neon: #00f0ff;
+  --ungu-neon: #a900ff;
+  --pink-neon: #ff00c8;
+  --hitam-bg: #0e0e0e;
+  --putih: #ffffff;
+}
+
+/* --- Global Reset dan Typography --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--hitam-bg);
+  color: var(--putih);
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  line-height: 1.5;
+}
+
+/* --- Neon Text Gradien --- */
+.text-gradient {
+  background: linear-gradient(90deg, var(--biru-neon), var(--ungu-neon), var(--pink-neon));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+/* --- Navbar --- */
+.navbar {
+  background-color: rgba(14,14,14,0.8) !important;
+  backdrop-filter: saturate(180%) blur(10px);
+  border-bottom: 2px solid var(--biru-neon);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5), 0 0 10px var(--biru-neon);
+}
+a.nav-link {
+  font-weight: 500;
+  transition: text-shadow 0.3s;
+}
+a.nav-link:hover {
+  text-shadow: 0 0 6px var(--pink-neon);
+}
+a.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--biru-neon), var(--pink-neon));
+  border-radius: 2px;
+}
+
+/* --- Input Neon --- */
+.neon-input {
+  background: #111;
+  border: 2px solid var(--biru-neon);
+  color: var(--putih);
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 0 10px var(--biru-neon);
+  backdrop-filter: blur(4px);
+  transition: box-shadow 0.3s;
+  height: 48px;
+}
+.neon-input::placeholder {
+  color: #bbb;
+}
+.neon-input:focus {
+  outline: none;
+  box-shadow: 0 0 12px var(--ungu-neon);
+}
+
+/* --- Buttons Neon --- */
+.btn-neon {
+  background: linear-gradient(45deg, var(--biru-neon), var(--ungu-neon));
+  color: var(--putih);
+  border: none;
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 0 10px var(--biru-neon), 0 0 20px var(--ungu-neon);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.btn-neon:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--pink-neon), 0 0 25px var(--biru-neon);
+}
+
+.btn-outline-neon {
+  border: 2px solid var(--biru-neon);
+  color: var(--biru-neon);
+  background: transparent;
+  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 0 8px var(--biru-neon);
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+.btn-outline-neon:hover {
+  background: var(--biru-neon);
+  color: var(--hitam-bg);
+  box-shadow: 0 0 12px var(--biru-neon);
+}
+
+/* --- Shadows --- */
+.shadow-neon {
+  box-shadow: 0 0 15px var(--biru-neon), 0 0 30px var(--ungu-neon);
+}
+
+/* --- Carousel --- */
+.carousel-inner {
+  border-radius: 12px;
+  box-shadow: 0 0 20px var(--biru-neon);
+}
+.carousel-inner img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+.carousel-inner img:hover {
+  transform: scale(1.02);
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+  box-shadow: 0 0 10px var(--pink-neon);
+}
+
+/* --- Flash Sale --- */
+.flash-card {
+  border-radius: 12px;
+  overflow: hidden;
+  background: var(--hitam-bg);
+  border: 2px solid var(--biru-neon);
+  box-shadow: 0 0 15px var(--ungu-neon);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.flash-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px var(--pink-neon), 0 0 30px var(--biru-neon);
+}
+.flash-card .card-body {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.flash-card .card-body h6 {
+  font-size: 1.1rem;
+  color: var(--pink-neon);
+  margin-bottom: 0.25rem;
+}
+.flash-card .card-body small {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+.flash-card .price {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.flash-card .price .new-price {
+  color: var(--pink-neon);
+  font-weight: bold;
+}
+.flash-card .price .old-price {
+  color: #777;
+  text-decoration: line-through;
+  font-size: 0.9rem;
+}
+.flash-card .progress {
+  height: 6px;
+  background: rgba(255,255,255,0.1);
+}
+.flash-card .progress-bar {
+  background: var(--ungu-neon);
+}
+.flash-card small.text-light-emphasis {
+  font-size: 0.85rem;
+}
+.flash-card .btn-sm {
+  font-size: 0.85rem;
+  padding: 0.4rem 0.75rem;
+}
+/* --- Trending Cards --- */
+.trending-card {
+  background: rgba(255,255,255,0.05);
+  border: 2px solid var(--biru-neon);
+  border-radius: 0.75rem;
+  backdrop-filter: blur(5px);
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 1rem;
+}
+.trending-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 10px var(--pink-neon), 0 0 20px var(--biru-neon);
+}
+.trending-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+/* --- List Produk --- */
+.btn-cat {
+  border-radius: 999px;
+  padding: 0.4rem 1rem;
+  transition: background 0.3s, color 0.3s;
+}
+.btn-cat.active {
+  background: var(--biru-neon);
+  color: var(--hitam-bg);
+}
+.product-card {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: var(--hitam-bg);
+  border: 2px solid var(--biru-neon);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card .card-body {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 0.75rem;
+}
+
+.product-card .card-title,
+.product-card .card-text {
+  color: #fff !important;
+}
+.product-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 10px var(--pink-neon), 0 0 20px var(--ungu-neon);
+}
+.product-card .link-icon {
+  background: rgba(0,0,0,0.5);
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  transition: background 0.3s, color 0.3s;
+}
+.product-card .link-icon:hover {
+  background: var(--pink-neon);
+  color: var(--hitam-bg);
+}
+
+/* --- Footer --- */
+footer {
+  background-color: var(--hitam-bg);
+  color: #ddd;
+  padding: 2rem 0;
+}
+footer h5, footer h6 {
+  color: var(--biru-neon);
+  font-weight: bold;
+}
+footer a {
+  color: #ddd;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+footer a:hover {
+  color: var(--biru-neon);
+  text-shadow: 0 0 6px var(--biru-neon);
+}
+footer hr {
+  border-color: var(--pink-neon);
+  opacity: 0.2;
+}
+/* Footer neon border-top */
+footer {
+  border-top: 2px solid var(--biru-neon);
+  box-shadow: 0 -2px 10px var(--biru-neon);
+}
