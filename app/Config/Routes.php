@@ -16,6 +16,11 @@ $routes->get('logout', 'AuthController::logout');
 $routes->get('/digiflazz/products', 'DigiflazzController::getPriceList');
 $routes->get('/digiflazz/getproducts', 'DigiflazzController::getGames');
 
+$routes->post('transaksi/submit', 'TransaksiController::submit');
+$routes->get('transaksi/check/(:segment)', 'TransaksiController::checkQRIS/$1');
+
+$routes->post('transaksi/order', 'TransaksiController::order');
+
 // app/Config/Routes.php
 $routes->group('admin', ['filter' => 'admin'], function($routes) {
     $routes->get('/', 'Admin\DashboardController::index');
@@ -39,7 +44,10 @@ $routes->group('admin', ['filter' => 'admin'], function($routes) {
     $routes->post('produk/delete/(:num)', 'Admin\ProductController::delete/$1');
     $routes->post('produk/upload-gambar', 'Admin\ProductController::uploadGambar');
     $routes->post('produk/update-gambar', 'Admin\ProductController::updateGambar');
-
 });
+
+$routes->post('payment/saldo', 'PaymentController::bayarSaldo');
+$routes->post('payment/bayarQris', 'PaymentController::bayarQris');
+
 
 

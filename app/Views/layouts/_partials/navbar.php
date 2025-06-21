@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-neon py-3">
   <div class="container d-flex align-items-center">
     <!-- Logo di kiri -->
-    <a class="navbar-brand text-gradient fw-bold me-4" href="#">Reynra Store</a>
+    <a class="navbar-brand text-gradient fw-bold me-4" href="<?= base_url(); ?>">Reynra Store</a>
 
     <!-- Collapse Toggle -->
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
@@ -11,6 +11,7 @@
 
     <!-- Content Navbar -->
     <div class="collapse navbar-collapse" id="navContent">
+      <div class="d-flex flex-column flex-lg-row align-items-center w-100 gap-3">
       <!-- Search Bar -->
       <div class="flex-fill position-relative mx-3">
         <input class="form-control neon-input rounded-pill" type="search" placeholder="Cari produk...">
@@ -29,6 +30,7 @@
                 id="userDropdown"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
+                data-bs-toggle="tooltip" title="Hi, <?= $userName ?>"
                 style="width: 44px; height: 44px; background: linear-gradient(135deg, var(--biru-neon), var(--pink-neon)); box-shadow: 0 0 10px var(--biru-neon), 0 0 15px var(--pink-neon);">
           <?= $initials ?>
         </button>
@@ -77,7 +79,7 @@
     <?php else: ?>
       <a href="#" class="btn btn-outline-neon rounded-pill px-4 shadow" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
     <?php endif; ?>
-
+      </div>
     </div>
   </div>
 </nav>
